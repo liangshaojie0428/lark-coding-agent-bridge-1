@@ -44,6 +44,10 @@
     "test:process": "vitest run tests/process --passWithNoTests",
     "ci:local": "git diff --check && pnpm test && pnpm typecheck && pnpm build",
     "ci:platform": "pnpm test && pnpm typecheck && pnpm build",
+    "start": "node bin/lark-channel-bridge.mjs run --agent claude",
+    "start:bg": "node bin/lark-channel-bridge.mjs start",
+    "stop": "node bin/lark-channel-bridge.mjs stop",
+    "status": "node bin/lark-channel-bridge.mjs ps",
     "prepare": "npm run build",
     "prepublishOnly": "pnpm typecheck && pnpm build"
   },
